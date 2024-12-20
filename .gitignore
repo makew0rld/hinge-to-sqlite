@@ -1,0 +1,6 @@
+*.json
+*.db
+*.svg
+*.png
+sankey*
+*.bak
