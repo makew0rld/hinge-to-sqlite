@@ -13,7 +13,7 @@ python3 hinge-to-sqlite.py hinge.db matches.json
 python3 analysis.py hinge.db
 ```
 
-- `hinge.db` is the path to your SQLite database file, it doesn't have to exist yet.
+- `hinge.db` is the path to your SQLite database file, it doesn't have to exist yet
 - `matches.json` is the path to your `matches.json` file from your Hinge export
 
 ## License
