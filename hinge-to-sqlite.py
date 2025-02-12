@@ -86,7 +86,11 @@ for i, match in enumerate(matches):
 
     elif "like" in match:
         # Like but no match
-        assert len(match["like"]) == 1
+
+        # Sometimes there can be multiple likes for one profile
+        # So remove this assertion, and just consider the first like for the timestamp
+        # assert len(match["like"]) == 1
+
         mtype = "like"
         timestamp = match["like"][0]["timestamp"]
         # For consistency
