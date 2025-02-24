@@ -97,7 +97,13 @@ for i, match in enumerate(matches):
         like_from = "me"
 
     elif "block" in match:
-        assert len(match["block"]) == 1
+        # Sometimes there can be multiple blocks for one profile
+        # So remove this assertion and just consider the first one
+        # This has an issue if the person reported them and then removed them
+        # But so far I've only seen remove then report
+        # In either case I'm not sure how that happens...
+        # assert len(match["block"]) == 1
+
         if match["block"][0]["block_type"] == "remove":
             mtype = "remove"
             timestamp = match["block"][0]["timestamp"]
